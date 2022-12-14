@@ -7,7 +7,9 @@ const ERROR_MESSAGE = Object.freeze({
   vendingChangeInput: '[ERROR] 0으로 나눌 수 있는 숫자를 입력해주세요.',
 });
 
-const MODEL_KEY = Object.freeze({});
+const MODEL_KEY = Object.freeze({
+  change: 'VENDING_CHANGE',
+});
 
 const GAME_TEXT = Object.freeze({});
 
