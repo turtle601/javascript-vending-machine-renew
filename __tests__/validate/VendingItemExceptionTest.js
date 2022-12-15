@@ -4,6 +4,7 @@ describe('BaseBallInputException 입력값 테스트', () => {
   test.each([
     ['[콜라, 사이다, 100];[]'],
     ['[콜라, 1500, 1];[사이다: 1200, 2]'],
+    ['[콜라,1500,1];[사이다:20,2]'],
     [' 1220'],
   ])('(실패) 숫자 입력값 확인', (input) => {
     const vendingItemException = new VendingItemException(input);
