@@ -12,6 +12,7 @@ const ERROR_MESSAGE = Object.freeze({
 
 const MODEL_KEY = Object.freeze({
   change: 'VENDING_CHANGE',
+  item: 'VENDING_ITEM',
 });
 
 const GAME_TEXT = Object.freeze({});
