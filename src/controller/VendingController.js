@@ -1,4 +1,5 @@
 const VendingMachine = require('../service/VendingMachine');
+
 const { ERROR_MESSAGE } = require('../utils/constants');
 
 let instance = null;
@@ -14,6 +15,14 @@ class VendingController {
     instance = this;
 
     this.#service = new VendingMachine();
+  }
+
+  inputChange(change) {
+    this.#service.putChange(change);
+  }
+
+  inputItem(item) {
+    this.#service.putItem(item);
   }
 }
 
