@@ -4,6 +4,7 @@ const VendingChange = require('./domain/VendingChange');
 const VendingItem = require('./domain/VendingItem');
 
 const { makeRandomCoin } = require('../utils/makeRandomCoin');
+const { MODEL_KEY } = require('../utils/constants');
 
 class VendingMachine {
   #repo;
@@ -28,6 +29,10 @@ class VendingMachine {
     });
 
     vendingItem.store();
+  }
+
+  getChange() {
+    return this.#repo.read(MODEL_KEY.change);
   }
 }
 

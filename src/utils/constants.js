@@ -18,6 +18,7 @@ const MODEL_KEY = Object.freeze({
 const GAME_TEXT = Object.freeze({
   change: '자판기가 보유하고 있는 금액을 입력해 주세요.\n',
   item: '상품명과 가격, 수량을 입력해 주세요.\n',
+  informChange: '자판기가 보유한 동전\n',
 });
 
 module.exports = {

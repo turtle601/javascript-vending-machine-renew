@@ -24,6 +24,10 @@ class VendingController {
   inputItem(item) {
     this.#service.putItem(item);
   }
+
+  outputChange() {
+    return this.#service.getChange();
+  }
 }
 
 module.exports = Object.freeze(new VendingController());

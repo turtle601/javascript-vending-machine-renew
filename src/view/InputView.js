@@ -6,6 +6,7 @@ const VendingItemException = require('../validate/VendingItemException');
 
 const { GAME_TEXT } = require('../utils/constants');
 const { errorCheckFor } = require('../utils/errorCheckFor');
+const OutputView = require('./OutputView');
 
 const InputView = {
   vaildate(exceptionInstance) {
@@ -15,6 +16,7 @@ const InputView = {
   successReadChangeEvent(input) {
     this.vaildate(new VendingChangeException(input));
     controller.inputChange(input);
+    OutputView.printChange();
 
     this.readVendingItem();
   },
