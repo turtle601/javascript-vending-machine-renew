@@ -3,6 +3,8 @@ const VendingRepository = require('../repository/VendingRepository');
 const VendingChange = require('./domain/VendingChange');
 const VendingItem = require('./domain/VendingItem');
 
+const { makeRandomCoin } = require('../utils/makeRandomCoin');
+
 class VendingMachine {
   #repo;
 
@@ -12,7 +14,7 @@ class VendingMachine {
 
   putChange(change) {
     const vendingChange = new VendingChange({
-      input: change,
+      input: makeRandomCoin(change),
       repo: this.#repo,
     });
 

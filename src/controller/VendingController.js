@@ -18,7 +18,7 @@ class VendingController {
   }
 
   inputChange(change) {
-    this.#service.putChange(change);
+    this.#service.putChange(+change);
   }
 
   inputItem(item) {
